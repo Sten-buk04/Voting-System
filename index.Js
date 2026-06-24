@@ -30,3 +30,17 @@ function vote(option, voterId) {
 
   return `Voter ${voterId} voted for "${option}".`;
 }
+
+
+function displayResults() {
+  let results = "Poll Results:\n";
+
+  poll.forEach((voters, option) => {
+    results += `${option}: ${voters.size} votes\n`;
+  });
+
+  return results.trim();
+}
+
+
+https://github.com/Sten-buk04/Voting-System.git
