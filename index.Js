@@ -42,5 +42,12 @@ function displayResults() {
   return results.trim();
 }
 
+addOption("Stella");
+addOption("Isaac");
+addOption("Dee");
 
-https://github.com/Sten-buk04/Voting-System.git
+vote("Stella", 1);
+vote("Stella", 2);
+vote("Dee", 3);
+
+
