@@ -14,3 +14,19 @@ function addOption(option) {
   return `Option "${option}" added to the poll.`;
 }
 
+
+function vote(option, voterId) {
+  if (!poll.has(option)) {
+    return `Option "${option}" does not exist.`;
+  }
+
+  const voters = poll.get(option);
+
+  if (voters.has(voterId)) {
+    return `Voter ${voterId} has already voted for "${option}".`;
+  }
+
+  voters.add(voterId);
+
+  return `Voter ${voterId} voted for "${option}".`;
+}
